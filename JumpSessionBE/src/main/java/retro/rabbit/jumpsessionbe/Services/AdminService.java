@@ -19,7 +19,10 @@ public class AdminService {
     private CheckOutRepository checkOutRepository;
 
     public List<Admin> getAllAdmins() {
-        return adminRepository.findAll();
+        var admins = adminRepository.findAll();
+        System.out.println(admins);
+        return admins;
+//        return adminRepository.findAll();
     }
 
     public Optional<Admin> getAdminById(Long id) {
